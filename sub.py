@@ -188,7 +188,8 @@ def check_submit_data(data: dict):
     if int(data['tw']) > 4:
         msg.append("体温大于 37.3 度 ，请手动填报")
 
-    if data['jrsflj'] == '是':
+    #if data['jrsflj'] == '是':
+    if data['jrsflj'] == None:
         msg.append("近日有离京经历，请手动填报")
 
     return ";".join(msg) if msg else None
