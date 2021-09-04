@@ -50,7 +50,7 @@ TZ=Asia/Shanghai
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ```
 
-
+111
 
 # 方法二： 使用 GitHub Actions（推荐使用）
 没有服务器的同学可以使用 GitHub Action 来进行运行此程序。
