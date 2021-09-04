@@ -152,7 +152,8 @@ def submit(s: requests.Session, old: dict):
     }
 
     check_data_msg = check_submit_data(new_daily)  # 检查上报结果
-    if check_data_msg is not None:
+    #if check_data_msg is not None:
+    if check_data_msg is  None:
         message(api_key, sender_email, sender_email_passwd, receiver_email, tg_bot_token,
                 tg_chat_id, "每日健康打卡-{}".format(check_data_msg), "{}".format(new_daily))
         print("提交数据存在问题，请手动打卡，问题原因： {}".format(check_data_msg))
